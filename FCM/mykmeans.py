@@ -143,7 +143,7 @@ class k_Means(object):
             k_new = np.array(k_new)
             # print(k_new)
             # 更新质心
-            print("newcentroids",k_new)
+            print("newcentroids", k_new)
             # print(centroids, "centroids")
             if ~(k_new == centroids).all():
                 centroids = k_new
@@ -157,7 +157,7 @@ class k_Means(object):
                 for i in range(self.k):
                     a = [dataset_copy[km[i][j]] for j in range(len(km[i]))]
                     result_km.append(np.array(a))
-                #[dataset_copy[km[i][j]] for i in range(self.k) for j in range(len(km[i]))] 有空试试二维列表生成
+                # [dataset_copy[km[i][j]] for i in range(self.k) for j in range(len(km[i]))] 有空试试二维列表生成
                 return result_km
 
 
@@ -181,5 +181,5 @@ if __name__ == '__main__':
     # print(k1.testDistEclud(centroids[0], centroids[1]))
     result = k1.kMeans(data, centroids)
     for item in range(len(result)):
-        print("第"+str(item+1)+"簇")
+        print("第" + str(item + 1) + "簇")
         print(result[item])
